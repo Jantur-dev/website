@@ -1,0 +1,182 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 1500px;
+}
+
+nav ul li {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 1.3px;
+    background-color: white;
+    right: -13px;
+    top: 10px;
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+.dropdown::after{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 1.3px;
+    background-color: white;
+    right: -20px;
+    top: 10px;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+}
+
+.dropdown.active::before{
+    right: -20px;
+}
+
+.dropdown.active::after{
+    right: -13px;
+}
+
+.dropdown .option {
+    position: absolute;
+    width: 155px;
+    padding: 12px 0;
+    background-color: #747474;
+    display: none;
+    top: 35px;
+    right: -45px;
+    transition: 0.25s;
+    z-index: 5;
+}
+
+.dropdown .option div {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.dropdown .option div:hover {
+    background-color: white;
+    color: #747474;
+}
+
+.dropdown.active .option {
+    display: block;
+}
+
+/* hero */
+.hero {
+    height: 575px;
+}
+/* akhir hero */
+
+/* profil */
+.dev {
+    width: 300px;
+    height: 350px;
+    background-color: black;
+    margin: 25px auto;
+    position: relative;
+}
+
+.card {
+    display: flex;
+}
+
+.dev::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(51 65 85);
+    width: 100%;
+    height: 45%;
+
+}
+
+/* akhir profil */
+
+.card {
+    margin: 20px 0;
+}
+
+/* responsive */
+@media (max-width: 400px){
+    .respon {
+        width: 36px;
+        height: 36px;
+        background-color: #94a3b8;
+    }
+
+    .respon ul {
+        /* opacity: 0; */
+        color: whitesmoke;
+        position: relative;
+        top: 50px;
+        right: 55px;
+        display: none;
+        background-color: red;
+        width: auto;
+        padding: 7px 5px;
+        height: 100px;
+    }
+
+    .respon ul li {
+        margin: 5px 2px;
+        text-align: center;
+    }
+
+    .dropdown::before{
+        right: 80px;
+        transform: rotate(-45deg);
+    }
+    .dropdown::after {
+        right: 86px;
+        transform: rotate(45deg) translate(9px, 0);
+    }
+
+    .dropdown.active::before{
+        top: 15px;
+        right: 80px;
+    }
+    
+    .dropdown.active::after{
+        top: 1px;
+        right: 86px;
+    }
+
+    .dropdown .option {
+        right: 100px;
+        top: -15px;
+    }
+
+    .dropdown .option::before {
+        content: '';
+        background-color: #747474;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: -4px;
+        top: 22px;
+        transform: rotate(45deg);
+        /* border-top-right-radius: 500px;
+        border-bottom-right-radius: 500px; */
+        z-index: 100;
+    }
+
+
+}
+
+
+/* .kotak {
+    width: 36px;
+    height: 36px;
+    background-color: #64748b;
+    
+} */

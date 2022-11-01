@@ -1,0 +1,40 @@
+<%- include("layouts/header") %> 
+<nav class="flex justify-between px-5 py-5 dark:bg-gray-700">
+    <div class="">
+        <img src="/img/logo-Djantur.png" alt="logo-djawir" class="w-11 rounded-full">
+    </div>
+    <div class="flex nav">
+        <ul class="flex gap-7">
+            <li class="cursor-pointer -mr-2 mt-2">HOME</li>
+            <li class="dropdown cursor-pointer mr-2 flex justify-center mt-2">
+                <span>ABOUT</span>
+                <div class="option py-2 rounded">
+                    <a href="#about"><div class="px-2 py-2">GAME</div></a>
+                    <a href="/developer"><div class="px-2 py-2">DEVELOPER</div></a>
+                    <div class="px-2 py-2">SARAN</div>
+                </div>
+            </li>
+            <li class="cursor-pointer mt-2">DOWNLOAD</li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <!-- hero -->
+    <div class="bg-gray-500 w-auto hero">
+        <img src="https://dummyimage.com/750x400/000000/fff.png&text=tes" alt="img" class=" img-hero relative">
+    </div>
+    <!-- akhir hero -->
+    <!-- about -->
+    <div id="about" class="py-3 flex-col justify-center">
+        <h1 class="text-3xl text-center py-3">ABOUT GAME</h1>
+        <hr class="w-1/3 border-solid border-black mx-auto">
+        <p class="py-3 text-center w-3/4 mx-auto">Djantur dibuat sejak 10 Oktober 2022 karena ada nya tugas sekolah ヾ(≧▽≦*)o</p>
+    </div>
+    <!-- akhir about -->
+</main>
+
+
+
+<script src="js/iscript.js"></script>
+<%- include("layouts/footer") %> 
